@@ -2,5 +2,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: black;
 }
 
+body {
+    height: 150px;
+    width: 250px;
+    margin: 10em auto;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+header img {
+    width: 20%;
+}
+
+#fire {
+    height: 20px;
+}
+
+.active {
+    text-decoration: line-through;
+}
