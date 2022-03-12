@@ -8,6 +8,7 @@ count.textContent = revengesCount;
 function addTask(task) {
     const template = `<li class="task">
         <span>${task}</span> 
+        
         <img src="assets/icons/fire.svg" id="fire">
       </li>`;
 

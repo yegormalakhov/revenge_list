@@ -13,6 +13,7 @@ body {
 
 h1 {
     font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 
 header img {
@@ -30,4 +31,9 @@ header img {
 #cemetery {
     width: 30px;
     height: 30px;
+}
+
+p {
+    display: inline-block;
+    margin-bottom: 10px;
 }
