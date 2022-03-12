@@ -26,3 +26,8 @@ header img {
 .active {
     text-decoration: line-through;
 }
+
+#cemetery {
+    width: 30px;
+    height: 30px;
+}

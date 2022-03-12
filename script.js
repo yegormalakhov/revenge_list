@@ -1,6 +1,9 @@
 const list = document.querySelector("ul");
 const form = document.querySelector(".addTask");
+const count = document.querySelector('#count')
+let revengesCount = 0;
 
+count.textContent = revengesCount;
 
 function addTask(task) {
     const template = `<li class="task">
@@ -32,7 +35,10 @@ const activeClass = list.addEventListener('click', e => {
 });
 
 list.addEventListener('click', e => {
-   if (e.target.id === 'fire') e.target.parentElement.remove()
+   if (e.target.id === 'fire') 
+   e.target.parentElement.remove();
+   revengesCount++;
+   count.textContent = revengesCount;
 });
 
 
