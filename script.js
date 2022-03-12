@@ -28,7 +28,12 @@ function handleNewTask(event) {
 };
 
 const activeClass = list.addEventListener('click', e => {
-    e.target.parentElement.classList.toggle("active")
+    e.target.classList.toggle("active")
 });
+
+list.addEventListener('click', e => {
+   if (e.target.id === 'fire') e.target.parentElement.remove()
+});
+
 
 form.addEventListener("submit", handleNewTask);
