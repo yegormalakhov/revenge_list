@@ -1,49 +1,74 @@
-const list = document.querySelector("ul");
+const listOfTasks = document.querySelector("ul");
 const form = document.querySelector(".addTask");
-const count = document.querySelector('#count')
+const count = document.querySelector("#count");
+
 let revengesCount = 0;
 
-// count.textContent = revengesCount;
+const tasks = [{
+        name: "Find a person",
+    },
+    {
+        name: "Make him/her pay! Online",
+    },
+    {
+        name: "But not in real live",
+    },
+];
 
 function addTask(task) {
-    const template = `<li class="task">
-        <span>${task}</span> 
-
+    const template = `
+      <li class="task">
+        <span>${task.name}</span> 
         <img src="assets/icons/fire.svg" id="fire">
-      </li>`;
+      </li>
+    `;
 
-    list.innerHTML += template;
+    listOfTasks.innerHTML += template;
 }
 
-addTask("Find a person");
-addTask("Make him/her pay! Online");
-addTask("But not in real live");
-
+function renderTasks() {
+    tasks.forEach((task) => addTask(task));
+}
 
 function handleNewTask(event) {
     event.preventDefault();
-    if (form.add.value.trim()) {
-        addTask(form.add.value.trim());
-        activeClass();
-        taskInput = "";
+    const task = form.add.value.trim();
+    if (task) {
+        tasks.push({ name: task });
+        clearAndRender();
+
+        form.reset();
     } else {
         alert("Please enter a target!");
     }
-};
+}
 
-const activeClass = list.addEventListener('click', e => {
-    e.target.classList.toggle("active")
-});
+function clearAndRender() {
+    clearTasks(listOfTasks);
+    renderTasks();
+}
 
-list.addEventListener('click', e => {
-   if (e.target.id === 'fire') {
-       e.target.parentElement.remove();
+listOfTasks.addEventListener("click", (e) => {
+    if (e.target.id === "fire") {
+        e.target.parentElement.remove();
         revengesCount++;
         count.textContent = revengesCount;
-   } else {
-       console.log('')
-   }
+    } else {
+        console.log("");
+    }
 });
 
+function clearTasks(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+}
 
+console.log(form);
 form.addEventListener("submit", handleNewTask);
+
+listOfTasks.addEventListener("click", (e) => {
+    e.target.classList.toggle("active");
+});
+
+renderTasks();
