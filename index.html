@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revenge ToDo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
     <script defer src="script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <div class="row">
-                <h1 class="col-12">Revenge To-Do List</h1>
-            </div>
-            <div class="row">
-                <p class="col-9">Solved Problems: <span id="count">0</span></p>
-                <img class="col-3" id="cemetery" src="assets/icons/cemetery.svg">
-            </div>
-        </header>
+      <header>
         <div class="row">
-            <div class="col">
-                <ul>
-                </ul>
-            </div>
+          <h1 class="col-12">Revenge To-Do List</h1>
         </div>
         <div class="row">
-            <div class="col">
-                <form class="addTask">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="add" placeholder="My next victim" aria-label="Next victim" aria-describedby="button-addon2">
-                        <button class="btn btn-danger" type="button" id="button-addon2">Make'em pay!</button>
-                    </div>
-                </form>
-            </div>
+          <p class="col-9">Solved Problems: <span id="count">0</span></p>
+          <img class="col-3" id="cemetery" src="assets/icons/cemetery.svg" />
         </div>
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable -->
-        <!-- <ul>
+      </header>
+      <div class="row">
+        <div class="col">
+          <ul></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <form class="addTask">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name="add"
+                placeholder="My next victim"
+                aria-label="Next victim"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-danger" type="button" id="button-addon2">
+                Make'em pay!
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable -->
+      <!-- <ul>
             <li contenteditable>Something</li>
             <li>Something</li>
             <li>Something</li>
         </ul> -->
-
     </div>
-</body>
-
+  </body>
 </html>
