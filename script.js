@@ -20,12 +20,14 @@ const tasks = [
 function addTask(task) {
   const template = `
       <li class="task">
-        <span>${task.name}</span> 
+        ${task.name}
         <img src="assets/icons/fire.svg" id="fire">
       </li>
     `;
 
   listOfTasks.innerHTML += template;
+  //added
+  //   tasks.push(`{name: ${task.name}}`);
 }
 
 function renderTasks() {
@@ -38,7 +40,6 @@ function handleNewTask(event) {
   if (task) {
     tasks.push({ name: task });
     clearAndRender();
-
     form.reset();
   } else {
     alert("Please enter a target!");
@@ -50,8 +51,20 @@ function clearAndRender() {
   renderTasks();
 }
 
+//added
+
+function removeFromTasks(e) {
+  const index = tasks.splice(
+    tasks.indexOf((task) => task.name === e.target.parentElement.textContent),
+    1
+  );
+}
+
+//end
+
 listOfTasks.addEventListener("click", (e) => {
   if (e.target.id === "fire") {
+    removeFromTasks(e);
     e.target.parentElement.remove();
     revengesCount++;
     count.textContent = revengesCount;
