@@ -19,8 +19,8 @@ const tasks = [
 
 function addTask(task) {
   const template = `
-      <li class="task">
-        <span>${task.name}</span> 
+      <li class="d-flex justify-content-between task list-group-item list-group-item-danger bg-secondary text-white">
+       ${task.name}
         <img src="assets/icons/fire.svg" id="fire">
       </li>
     `;

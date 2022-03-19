@@ -6,19 +6,17 @@
 }
 
 body {
-  height: 200px;
-  width: 400px;
-  margin: 1rem auto;
+  /* width: 400px; */
 }
 
-h1 {
+/* h1 {
   font-size: 1.6rem;
   margin-bottom: 10px;
-}
-
+} */
+/* 
 header img {
   width: 20%;
-}
+} */
 
 #fire {
   height: 20px;
@@ -31,9 +29,10 @@ header img {
 #cemetery {
   width: 30px;
   height: 30px;
+  filter: invert();
 }
 
 p {
   display: inline-block;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }

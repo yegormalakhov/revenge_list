@@ -20,19 +20,30 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container bg-dark mx-auto">
       <header>
         <div class="row">
-          <h1 class="col-12">Revenge To-Do List</h1>
+          <h1 class="col text-danger text-center fw-5 py-3 fw-bolder">
+            Revenge List
+          </h1>
         </div>
         <div class="row">
-          <p class="col-9">Solved Problems: <span id="count">0</span></p>
-          <img class="col-3" id="cemetery" src="assets/icons/cemetery.svg" />
+          <div class="col-4 mx-auto text-center">
+            <p class="text-danger">
+              Solved Problems:
+              <span class="text-danger mx-1" id="count">0</span>
+            </p>
+            <img
+              class="text-white"
+              id="cemetery"
+              src="assets/icons/cemetery.svg"
+            />
+          </div>
         </div>
       </header>
       <div class="row">
         <div class="col">
-          <ul></ul>
+          <ul class="list-group my-3"></ul>
         </div>
       </div>
       <div class="row">
@@ -41,7 +52,7 @@
             <div class="input-group mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control text-danger"
                 name="add"
                 placeholder="My next victim"
                 aria-label="Next victim"
