@@ -17,6 +17,8 @@ const tasks = [
   },
 ];
 
+// const tasksToScreen = JSON.parse(localStorage.getItem("tasks"));
+
 function addTask(task) {
   const template = `
       <li class="task">
@@ -32,6 +34,8 @@ function addTask(task) {
 
 function renderTasks() {
   tasks.forEach((task) => addTask(task));
+      // tasksToScreen.forEach((task) => addTask(task));
+
 }
 
 function handleNewTask(event) {
@@ -39,6 +43,7 @@ function handleNewTask(event) {
   const task = form.add.value.trim();
   if (task) {
     tasks.push({ name: task });
+            // localStorage.setItem("tasks", JSON.stringify(tasks));
     clearAndRender();
     form.reset();
   } else {
