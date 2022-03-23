@@ -1,39 +1,38 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
 }
 
 body {
-  height: 200px;
-  width: 400px;
-  margin: 1rem auto;
+    padding-top: 2em;
+    /* width: 400px; */
 }
 
 h1 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-header img {
-  width: 20%;
+    text-shadow: #474747 3px 5px 2px;
 }
 
 #fire {
-  height: 20px;
+    height: 25px;
+}
+
+#fire:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .active {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 #cemetery {
-  width: 30px;
-  height: 30px;
+    width: 40px;
+    height: 40px;
+    filter: invert();
 }
 
 p {
-  display: inline-block;
-  margin-bottom: 10px;
+    display: inline-block;
 }
